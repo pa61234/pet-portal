@@ -1,0 +1,13 @@
+{
+  "name": "Pet-Portal 🐾",
+  "short_name": "Pet-Portal",
+  "description": "전국 반려동물 장례 서비스 마켓플레이스",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4F46E5",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "health"],
+  "lang": "ko",
+  "dir": "ltr"
+} 

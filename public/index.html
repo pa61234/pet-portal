@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet-Portal 🐾 - 반려동물 장례 서비스</title>
+    <meta name="description" content="전국 반려동물 장례 서비스 마켓플레이스 - 검색, 예약, 결제, 실시간 추적">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="manifest" href="/manifest.json?v=2">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Pet-Portal">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://flex.sharetribe.com">
+    <link rel="preconnect" href="https://api.tosspayments.com">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css?v=2">
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Firebase SDK -->
+    <script src="/js/firebase-config.js?v=2"></script>
+    
+    <!-- Main App -->
+    <script src="/js/app.js?v=2"></script>
+    
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js?v=2')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html> 

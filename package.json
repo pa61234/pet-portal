@@ -1,0 +1,45 @@
+{
+  "name": "pet-portal",
+  "version": "0.4.0",
+  "description": "반려동물 장례 서비스 마켓플레이스 - 검색, 예약, 결제, 실시간 추적",
+  "main": "index.js",
+  "scripts": {
+    "dev": "firebase emulators:start",
+    "dev:hosting": "firebase emulators:start --only hosting",
+    "dev:functions": "firebase emulators:start --only functions",
+    "build": "cd functions && npm run build",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "logs:tail": "firebase functions:log --tail",
+    "test": "cd functions && npm test",
+    "lint": "cd functions && npm run lint",
+    "setup": "npm install && cd functions && npm install",
+    "clean": "firebase emulators:start --only firestore --export-on-exit=./data"
+  },
+  "keywords": [
+    "pet",
+    "funeral",
+    "marketplace",
+    "pwa",
+    "firebase",
+    "sharetribe",
+    "toss-payments"
+  ],
+  "author": "Pet-Portal Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/pet-portal.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  },
+  "workspaces": [
+    "functions"
+  ]
+} 
